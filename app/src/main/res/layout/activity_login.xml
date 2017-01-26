@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.frostox.doughnuts.activities.LoginActivity"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_login_app_icon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/activity_login_email"
+        android:contentDescription="@string/app_name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_login_email"
+        android:layout_alignParentStart="true"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_hint"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/linearLayout" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/activity_login_password"
+        android:layout_below="@+id/activity_login_email"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/activity_login_email"
+        android:hint="@string/password_hint"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_login_password"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:id="@+id/linearLayout">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/help_button"
+            android:id="@+id/activity_login_help"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sign_in_button"
+            android:id="@+id/activity_login_sign_in"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="@android:color/white"
+            android:onClick="signIn"/>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/register_message"
+        android:id="@+id/activity_login_register"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:onClick="register"
+        />
+
+
+</RelativeLayout>

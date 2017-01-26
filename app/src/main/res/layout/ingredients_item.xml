@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/ingredients_item_count"
+        android:textSize="40sp"
+        android:ems="1"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="tablespoons"
+        android:id="@+id/ingredients_item_unit"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ingredients_item_count" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Powdered sugar"
+        android:id="@+id/ingredients_item_name"
+        android:layout_below="@+id/ingredients_item_unit"
+        android:layout_alignStart="@+id/ingredients_item_unit" />
+
+
+</RelativeLayout>
